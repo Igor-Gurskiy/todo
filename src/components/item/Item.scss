@@ -1,0 +1,73 @@
+
+$primary-color: #4CAF50;
+$hover-bg: #e9e9e9;
+$text-color: #333;
+$completed-text: #888;
+$border-radius: 8px;
+$gap: 10px;
+$padding: 10px 15px;
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+  padding: $padding;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-bg;
+  }
+
+  input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]:checked + .checkbox {
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    &::after {
+      content: "✓";
+      color: white;
+      font-size: 12px;
+    }
+  }
+
+  .title {
+    flex: 1;
+    margin: 0;
+    font-size: 16px;
+    color: $text-color;
+    white-space: nowrap;    
+    overflow: hidden;         
+    text-overflow: ellipsis;   
+    max-width: 100%;          
+    padding-right: 10px;  
+  }
+
+  input[type="checkbox"]:checked ~ .title {
+    text-decoration: line-through;
+    color: $completed-text;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
