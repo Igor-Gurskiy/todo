@@ -1,4 +1,4 @@
-# Проект: "TaskMaster" - Управление задачами с Redux Toolkit
+# Проект: "todoes" - Управление задачами с Redux Toolkit
 
 **Frontend-разработчик**
 
@@ -19,7 +19,7 @@ TypeScript, React, Redux Toolkit, Vitest
 
 - Написал комплекс unit-тестов для редюсеров и селекторов (Vitest)
 
-**Установка и запуск:**
+**Установка, запуск, тесты:**
 ```
 npm install
 npm run start
