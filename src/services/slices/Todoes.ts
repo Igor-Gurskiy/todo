@@ -11,7 +11,7 @@ type TTodoesList = {
     filter: boolean | null
 }
 
-const initialState: TTodoesList = {
+export const initialState: TTodoesList = {
     list: [    {
         id: "1",
         title: "Закончить проект",
